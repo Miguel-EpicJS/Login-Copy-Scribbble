@@ -1,3 +1,10 @@
+@import url('http://fonts.cdnfonts.com/css/neue-haas-grotesk-text');
+
+@font-face {
+    font-family: "Haas Grot Text R Web";
+    src: url("./NeueHaasGrotTextRound-75Bold-Web.woff.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -6,13 +13,15 @@
 
 a {
     text-decoration: none;
+    color: #4f3CC9;
+    font-family: 'Neue Haas Grotesk Text', sans-serif;
 }
 
 main {
     overflow-y: hidden;
     display: flex;
     height: 100vh;
-    font: 14px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: normal 14px/20px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* Background color: #F1CDD7 */
@@ -22,16 +31,22 @@ main .left-side {
     color: #865C6C;
     display: flex;
     flex-direction: column;
-    width: 514px;
-    font:  32px/38px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 514px !important;
+ 
 }
 
 /* -- LEFT SIDE STYLE -- */
 
-main h1 {
-    font-size: 32px;
+h1 {
+    font-size: 35px;
+    font-weight: bolder;
     padding: 0 30px 0 0;  
-    line-height: 30px;
+    line-height: 35px;
+    font: bold 32px/38px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+art.span {
+    font-weight: 100 !important;
 }
 
 .top-main {
@@ -56,7 +71,7 @@ main h1 {
 .art span {
     margin: 0;
     padding: 25px 64px 35px;
-
+    font-family: 'Neue Haas Grotesk Text', sans-serif;
 }
 
 .bg-image {
@@ -64,18 +79,30 @@ main h1 {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
-    width: 514px;
+    width: 512px;
     padding: 0;
     flex-grow: 1;
-    height: 100%;
+    height: 610.5px;
 }
 
 /* LEFT SIDE STYLE END */
 
 /* RIGHT SIDE STYLE */
 
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: auto;
+}
+
 .right-side {
-    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
@@ -84,16 +111,16 @@ main h1 {
     align-items: center;
     justify-content: flex-end;
     padding: 30px 30px 0;
+    font-family: 'Neue Haas Grotesk Text', sans-serif;
+}
+
+.navbar a {
+    margin-left: 3px;
 }
 
 .signin-page {
-    display: flex;
-    width: 100%;
-    margin-top: -50px;
-    height: 100%;
-    flex-grow: 1;
-    align-items:center;
-    justify-content: center;
+    width: 536px;
+    padding: 30px 60px 0;
 }
 
 .signin-title {
@@ -103,8 +130,7 @@ main h1 {
 
 .signin-buttons {
     display: flex;
-    height: 37px;
-    justify-content: space-between;
+    margin: 0 0 40px;
 }
 
 .signin-google-button {
@@ -117,49 +143,55 @@ main h1 {
     padding: 2px;
     font-size: 20px;
     flex-grow: 0.5;
-    width: 200px;
+    width: 250px;
     text-align: center;
+    font-family: "Google Sans",arial,sans-serif;
 }
 
 .signin-google-button p {
-    margin-left: 20px;
+    width: 87%;
+    text-align: center;
 }
 
 .signin-google-button span svg {
     width: 20px;
+    height: 20px;
 }
 .signin-google-button span {
     background-color: white;
     border-radius:2px;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
 }
 
 .signin-twitter-button {
-    width: 10px;
-    height: 100%;
-    margin-left: 20px;
-    flex-grow: 0.3;
+    background-color: #f2f2f2;
+    color: #0d0c22;
+    width: 47px;
+    margin-left: 16px;
+    flex-grow: 0;
     display: flex;
-    border: 0;
-    border-radius: 10px;
-    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .signin-twitter-button svg {
-    width: 20px; 
-    position: relative;
-    left: 25%;
-    top: 17%;
+    width: 13px;
+    padding: 0;
+    margin: 0;
+    fill: #0d0c22;
 } 
 
 .divisor {
-    background: black;
+    background: #6e6d7a;
+    color: #6e6d7a;
     height: 1px;
-    opacity: 0.5;
-    margin-block-start: 1.5rem;
-    margin-block-end: 1.5rem;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
+    font-family: 'Neue Haas Grotesk Text', sans-serif;
+    margin-bottom: 40px; 
 }
 
 .divisor span {  
@@ -167,10 +199,82 @@ main h1 {
     top: -7px;
     left: 45%;
     padding: 2px 16px;
-    background: #fff;
-    font: bold 14px/14px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;   
-
+    background: #fff; 
 }
 
 
+.signin-form {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+}
 
+.signin-form-name-area, .signin-form-password-area {
+    display: flex;
+    flex-direction: column; 
+    font: bold 15px/24px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.signin-form-password-label span a { 
+    font-family: 'Neue Haas Grotesk Text', sans-serif;
+    font-weight: 400 !important;
+}
+
+input, .signin-twitter-button {
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+}
+
+input:hover, input:focus {
+    border-color: rgba(0,0,0,0.1);
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.signin-form-submit-button {
+    display: block;
+    width: 45%;
+    margin-top: 0px;
+    color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 16px;
+    transition: color 200ms ease;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #ea4c89;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+    font-family: 'Neue Haas Grotesk Text', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.signin-form-submit-button:hover {
+    background: #f082ac;
+}
+
+.signin-form-submit-button:active {
+    background: #bb3d6e;
+}
+
+.signin-form-password-label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
